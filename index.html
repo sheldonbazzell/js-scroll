@@ -31,12 +31,12 @@
 
 		function updateText()
 		{
-			el.innerHTML = el.innerHTML+words[word_counter][character_counter++];
-
-			if(words[word_counter][character_counter] === " "){
-				el.innerHTML += "&nbsp;"
-				character_counter++;
+			var character = words[word_counter][character_counter++];
+			if(character === ' '){
+				character = "&nbsp;"
 			}
+
+			el.innerHTML = el.innerHTML+character;
 
 			if(character_counter == words[word_counter].length + 1)
 			{
